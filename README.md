@@ -20,11 +20,11 @@ allowing changes to be pushed to my production server from my personal machine.
 # ONet Site Map
 Currently, ONet has the following pages:
 
-    * [index](www.onet.cool/index.html) - Main page for ONet
-    * [about](www.onet.cool/about.html) - Info about me
-    * [projects](www.onet.cool/projects.html) - Some of my personal projects
-    * [cool pages](www.onet.cool/cool_pages.html) - Super cool pages
-    * [contact](www.onet.cool/contact.html) - Info on where to find/contact me
+* [index](www.onet.cool/index.html) - Main page for ONet
+* [about](www.onet.cool/about.html) - Info about me
+* [projects](www.onet.cool/projects.html) - Some of my personal projects
+* [cool pages](www.onet.cool/cool_pages.html) - Super cool pages
+* [contact](www.onet.cool/contact.html) - Info on where to find/contact me
 
 # Conclusion
 
