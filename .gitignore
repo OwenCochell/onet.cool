@@ -1,0 +1,12 @@
+# Gitignore File
+
+# IntelliJ project files:
+
+.idea
+*.iml
+out
+gen
+
+# VSCode files:
+
+.vscode/

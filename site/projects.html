@@ -1,0 +1,421 @@
+<!--
+    --== [ ONet Projects: ] ==--
+This page contains certain projects of mine 
+that I think are important to share.
+-->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Projects</title>
+
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="normalize.css"/>
+
+    </head>
+
+    <body>
+
+        <!--#include virtual="sidebar.html" -->
+ 
+        <div class="inner">
+
+            <!--#include virtual="banner.html" -->
+
+            <h1>Projects</h1>
+
+            <p>
+                This page contains various projects that I have worked on.
+                You can find descriptions about said projects,
+                and relevant links.
+                Many of these projects are hosted on github,
+                and some even have external documentation!
+            </p>
+
+            <p>
+                All of my projects are proudly open source,
+                and any contributions are welcome and encouraged!
+                If you wish to get involved in any of these,
+                please shoot me an email or open a PR on GitHub!
+                I would be more than happy to hear your opinions/get your involved.
+            </p>
+
+            <details class="mctools">
+
+                <summary>mctools</summary>
+
+                <a href="https://github.com/Owen-Cochell/mctools">Project Page</a>
+                <a href="https://mctools.readthedocs.io/">Documentation</a>
+
+                <h2>Description</h2>
+
+                <p>
+                    mctools is a library that offers python implementations of common Minecraft protocols
+                    such as: RCON, Query, Server List Ping.
+                    mctools allows developers to interact with Minecraft servers in a meaningful way,
+                    without being too complicated.
+                    It also provides methods for formatting Minecraft color codes,
+                    so the end user does not have to.
+                    mctools also has a CLI tool that allows users to start an RCON session, query, and Ping 
+                    running Minecraft servers.
+                </p>
+
+                <h2>Future Plans</h2>
+
+                <p>
+                    I actually have really big plans for mctools!
+                    The first action I would like to take is to add in mixins
+                    that make server administration via RCON much simpler.
+                    This would mean building functions that do certain tasks into mctools.
+
+                    For example, if you want to ban a player via RCON, 
+                    you would invoke mctools like so:
+                </p>
+
+                <code>client.command("ban [PLAYER]")</code>
+
+                <p>
+                    Assume that <code>client</code> is an instantiated RCON client that is successfully authenticated,
+                    and <code>[PLAYER]</code> is the name of a player we wish to ban.
+                    This is fine and dandy, but it can be better!
+                    Eventually, I would like to see something like this:
+                </p>
+
+                <code>client.ban("[PLAYER]"")</code>
+
+                <p>
+                    As you can see, the functionality is built into mctools clients,
+                    allowing for a more pythonic way of doing certain tasks.
+                    Of course, all vanilla commands would be included,
+                    but I don't want to stop there.
+                    I also want to include mixins for 3rd party plugins,
+                    which would allow advanced tasks to be done easily.
+                </p>
+
+                <p>
+                    I would also like to somewhat automate this process by automatically
+                    pulling all valid commands and arguments from the remote server.
+                    This would not only allow mixins to be automatically generated,
+                    but it would also allow for RCON autocomplete,
+                    which would be a very powerful feature.
+                    mctools would also offer official mixins that won't 
+                    have the 'quirks' of generated ones.
+                </p>
+
+                <p>
+                    Some other tasks would be better error handling,
+                    actual testing, SSH forwarding for secure RCON,
+                    and maybe a custom server plugin that helps mctools 
+                    understand the server and it's commands. 
+                </p>
+
+                <p>
+                    All this is very possible!
+                    However, implementing these features can get really messy,
+                    as there are many server implementations and plugins that have their own 
+                    quirks that I have to work around.
+                    Until the huge RCON update comes,
+                    this mctools will continue to be maintained,
+                    and any bugs that arise will be corrected.
+                </p>
+            </details>
+
+            <details class="cursepy">
+
+                <summary>cursepy</summary>
+
+                <a href="https://github.com/Owen-Cochell/cursepy">Project Page</a>
+                <a href="https://cursepy.readthedocs.io/en/latest/index.html">Documentation</a>
+
+                <h2>Description</h2>
+
+                <p>
+                    cursepy is a library that offers python entry points into the 
+                    <a href="https://curseforge.com/">CurseForge(CF)</a> API,
+                    allowing python programs to interact with CF.
+                    cursepy's goal is to be very simple for developers who want something that 'just works',
+                    and heavily customizable for developers who have very specific use cases.
+                    cursepy uses a modular approach to interacting with CF,
+                    meaning that every request is tied to a handler that gets info from somewhere.
+                    This was necessary as CF does not have an official API,
+                    meaning that any component of any given entry point can be shut down completely
+                    or partially at any given moment.
+                    The handler based approach allows for functionality to be swapped in and out easily.
+                    And when used with the cusepy Handler Framework(CHF),
+                    handler development becomes quick and easy,
+                    which is crucial for quickly writing new handlers.
+                </p>
+
+                <h2>Future Plans</h2>
+
+                <p>
+                    cursepy is still a work in progress.
+                    The docs are still being edited as we speak,
+                    but their core content will remain the same; it will only be re-phrased.
+                    cursepy is still receiving some code changes,
+                    but nothing too major.
+                    I am still working out some issues wil CF's backend,
+                    as cursepy can't reliably fetch plugin info. 
+                </p>
+
+                <p>
+                    Future goals would defiantly be implementing
+                    more backends.
+                    I have my eyes on a few 3rd party ones
+                    (I will be contacting the owners of these services
+                    to ensure implementing them will be okay),
+                    and I have been attempting to dig deeper into CF backends.
+                    In the end though,
+                    cursepy will be the backend for a larger projects,
+                    this being a open source CLI package manager
+                    (kinda like <a href="https://multimc.org/">MultiMC</a>,
+                    but for the command line, and geared more towards servers.)
+                    that will allow for mods/plugins to be automatically installed
+                    and maintained, so the sysadmin(Me) does not have to! 
+                </p>
+
+                <p>Stay tuned for future updates on cusepy and my package manager!</p>
+            </details>
+
+            <details class="python-audio-synth">
+                <summary>Python-AudioSynth (Name still pending...)</summary>
+
+                <a href="https://github.com/Owen-Cochell/python-audio-synth">Project Page</a>
+
+                <h2>Description</h2>
+
+                <p>
+                    python-audio-synth(Name still pending...) is a modular open source audio synthesizer written in python.
+                    Users can connect modular components together to create sounds.
+                    These components range from oscillators, filters, amplitude scalers, synths(FM, AM).
+                    We also offer components that can change over time, such as envelopes(ADSR for example),
+                    linear/exponential ramps, LFOs.
+                    They can be attached to parameters on other components,
+                    for example a LFO can be attached to the 'amp' parameter on the amplitude scaler,
+                    which will cause the loudness of the wave to 'warble'.
+                    PAS offers many components that alter the properties of waves,
+                    which allows for complex voices to be made.
+                </p>
+
+                <p>
+                    PAS also has a built in sequencer, 
+                    which allows voices to be toggled on and off programmably.
+                    It provides easy to use entry point methods for toggling notes
+                    and other events, and allows for multi-channel sequencing,
+                    meaning that the sequencer can control multiple voices at once. 
+                    The PAS sequencer is also modular,
+                    which allows functionality and musical protocols to be easily added.
+                    The sequencer currently support basic MIDI through ALSA,
+                    music marco language, and ASCII Music(A simple protocol of my own design using ASCII characters).
+                    Variable speed event playback is also supported!
+                    We also offer convenience methods and classes to simplify working with 
+                    musical notes and rhythms.
+                </p>
+
+                <h2>Future Plans</h2>
+
+                <p>
+                    I have <i>HUGE</i> plans for PAS!
+                    As of now, PAS is a simple toy for working with audio and waves,
+                    but I would eventually like to turn it into a fully fledged tool.
+                    I would like to implement most synth components, 
+                    as well as methods to create sounds(FM, AM, wavetable).
+                    I'm also working on adding more modules to the sequencer
+                    to support more musical protocols
+                    (Keep an eye of for an external MIDI library!).
+                    Finally, I will be porting some math-heavy operations to C,
+                    as python simply is not fast enough for what I am trying to do.
+                </p>
+
+                <p>
+                    Someday I would like to see PAS as a viable option for python developers
+                    to use when creating complex sounds in projects.
+                    I would also like to see PAS used in a performance/musical production context.
+                    Specifically in the field of music generation
+                    (the process of creating music from random data),
+                    as that concept greatly interests me.
+                    Until then, PAS will remain a fun little toy,
+                    and will probably be one of my long term projects.
+                </p>
+            </details>
+
+            <details class="chas">
+                <summary>Computerized Home Automation System(chas)</summary>
+
+                <a href="https://github.com/Owen-Cochell/chas">Project Page</a>
+
+                <p>
+                    Computerized Home Automation System(chas) has been a passion project of mine since Freshman year of High School.
+                    chas is a modular, open source home automation framework that seeks to simplify home automation.
+                    I have always found home assistants to be awesome, but I dislike the privacy risks they introduce
+                    (I'm looking at you Amazon/Google).
+                    chas is my attempt at replacing other home assistants,
+                    and has the potential to emulate most(if not all) features offered by mainstream home assistants.
+                    chas also respects your privacy, unlike some other companies.
+                </p>
+
+                <p>
+                    chas has many components and features including, but not limited to:
+                </p>
+
+                <ul>
+                    <li>Custom socket server/protocol for server to node communication</li>
+                    <li>Wrappers for popular voice recognition engines</li>
+                    <li>Plugin system for adding functionality</li>
+                    <li>Custom nCurses wrappers for front end development</li>
+                    <li>WAV file reader/streamer</li>
+                    <li>And many more...</li>
+                </ul>
+
+                <h2>Future Plans</h2>
+
+                <p>
+                    I have <i>MASSIVE</i> plans for chas!
+                    I would like chas to eventually become a viable home automation solution. 
+                    chas still has many issues, the first being it's messy codebase.
+                    I started work on chas when I was very inexperienced,
+                    and I didn't really know what I was doing
+                    (I still don't know what I am doing, but I knew even less back then).
+                    This means that chas was a huge catalyst for me,
+                    encouraging me to learn complex concepts like networking, modular design,
+                    audio files, nCurses front end development, ect.
+                    In a way, I owe this project a lot,
+                    as it really pushed me to the point where I am now.
+                    While this is a nice sentiment,
+                    it still does not change the fact that my first implementations
+                    of these features were god awful.
+                    What chas needs most is a re-write and a spit-shine,
+                    which I will hopefully be doing in the near future.
+                    I will also be adding more features to chas as time goes on.
+                </p>
+
+                <p>
+                    chas needs a lot of work, 
+                    and it will probably be one of my long term projects.
+                    It will always hold a special place in my heart though,
+                    as it is one of my first steps into the world of computer science.
+                </p>
+                
+            </details>
+
+            <details class="ascii-game">
+                <summary>ASCII Game(Name pending ...)</summary>
+
+                <h2>Description</h2>
+
+                <p>
+                    ASCII Game(Name pending...) is a modular ascii based game engine written in python.
+                    Remember the old text-based adventures and dungeon crawlers
+                    (Like <a href="https://www.nethack.org/">NetHack</a>)?
+                    AG seeks to simply game development in this field!
+                    We offer nCurses wrappers for easy curses development(I actually ripped them straight from chas),
+                    a modular tilemap that allows entities to interact with each other,
+                    AI autoruns that allow for entity pathfinding,
+                    and a custom audio engine for playing sounds and music
+                    (Again, pulled this from PAS).
+                    AG is a work in progress, and is nowhere near completion.
+                    It is this reason why there is no project link.
+                    I am working on this project with a few good friends,
+                    so when we deem it appropriate, we will release this project to the world!
+                </p>
+
+            </details>
+
+            <details class="paper-update">
+
+                <summary>PaperMC-Update</summary>
+
+                <a href="https://github.com/Owen-Cochell/PaperMC-Update">Project Page</a>
+
+                <h2>Description</h2>
+
+                <p>
+                    PaperMC-Update is a very simple python script 
+                    that automatically updates your
+                    <a href="https://papermc.io/">PaperMC</a>
+                    server install.
+                    It automatically pulls version info from the current installed
+                    server, or you can manually specify it if you wish.
+                    It also allows you to select the version/build you want installed.
+                </p>
+
+                <h2>Future Plans</h2>
+
+                <p>
+                    I don't have any future plans for PaperMC-Update,
+                    as it is just a simple update script.
+                    I will continue to update it and patch any bugs as they arise.
+                </p>
+            </details>
+
+            <details class="dis">
+                <summary>Dynamic Insult System(DIS)</summary>
+
+                <a href="https://github.com/SlickRick-Jocool/D.I.S">Project Page</a>
+
+                <h2>Description</h2>
+
+                <p>
+                    Dynamic Insult System(DIS) is a python project that randomly creates insults.
+                    It is designed to be lightweight, so it can be ported to many platforms.
+                    As of now, DIS is only ported to Discord as a server bot.
+                    DIS is not available as of now, and is only implemented in my personal servers.
+                    DIS allows for it's wordlist to be altered during runtime,
+                    and it also supports a word expansion engine called DIS Insult Notation(DIN).
+                </p>
+
+                <h2>Future Plans</h2>
+
+                <p>
+                    I would really like to release DIS to the world!
+                    DIS still needs some backend work,
+                    and I would like to add more insult generators.
+                    I will probably not be hosting DIS on my own machines,
+                    but I will provide instructions on how to host it yourself.
+                    I will also need to find a new discord backend, as the 'discord.py'
+                    library is now defunct.
+                </p>
+            </details>
+
+            <details class="libkahoot">
+                <summary>libkahoot</summary>
+
+                <a href="https://github.com/Owen-Cochell/libkahoot">Project Page</a>
+
+                <h2>Description</h2>
+
+                <p>
+                    libkahoot is a python library that allows for applications to interact with Kahoot games.
+                    It offers a modular backend, which allows you to assign handlers to certain events.
+                    This allows you to create applications that react and interact with Kahoot games.
+                    It also allowed you to do some neat things like bypass two-factor authentication,
+                    as well as the name generator.
+                    libkahoot was primarily designed for bot development,
+                    but you could also use to create custom clients
+                    (I believe libkahoot has handlers that allow games to be played from the command line, for example).
+                </p>
+
+                <h2>Future Plans</h2>
+
+                <p>
+                    High School Freshman me was obsessed with botting of all kinds, 
+                    and he though that Kahoot botting was particularly enjoyable,
+                    as my school used Kahoot for many activites.
+                    These days however, I am not as interested in such activites.
+                    This means that libkahoot will probably not be receiving any major changes or overhauls
+                    in the near future.
+                    This is not to say that libkahoot will <i>never</i> receive updates,
+                    but for now libkahoot will remain dormant.
+                    I am not currently testing libkahoot,
+                    so I do not know if it even still works!
+                </p>
+            </details>
+
+        <!--#include virtual="footer.html" -->
+        </div>
+    </body>
+</html>

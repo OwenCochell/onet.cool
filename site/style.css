@@ -1,0 +1,232 @@
+/* Highlight color: */
+
+::-moz-selection {
+    background: #06d817;
+}
+
+::selection {
+    background: #06d817;
+}
+
+/* Collapsible */
+
+details {
+    border-top: 1px solid #999;
+    border-right: 2px solid #555;
+    border-bottom: 2px solid #555;
+    border-left: 1px solid #999;
+
+    padding:0.5em 0.5em 0;
+}
+
+summary {
+    font-weight: bold;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em;
+    color: #06d817;
+}
+
+details[open] {
+    padding: .5em;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #999;
+    margin-bottom: 0.5em;
+}
+
+/* Link Styles: */
+
+a:link {
+    color:#06d817;
+}
+
+a:visited {
+    color: #07a114a1
+}
+
+a:hover {
+    color: white
+}
+
+/* Set the styles for content to wrap around each other: */
+
+.right {
+    margin-left:30px;
+    float:right;
+    width:25%;
+    margin: 0 0 10px 10px;
+    padding: 10px;
+    border-top: 1px solid #999;
+    border-right: 2px solid #555;
+    border-bottom: 2px solid #555;
+    border-left: 1px solid #999;
+
+}
+
+.left {
+    margin-right:30px;
+    float:left;
+    width:25%;
+    margin: 0 10px px 0;
+    padding: 10px;
+    border-top: 1px solid #999;
+    border-right: 2px solid #555;
+    border-bottom: 2px solid #555;
+    border-left: 1px solid #999;
+
+}
+
+div.right img {
+    border-top: 2px solid #555;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
+    border-left: 2px solid #555;
+}
+
+div.left img {
+    border-top: 2px solid #555;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
+    border-left: 2px solid #555;
+}
+
+/* Column Styles: */
+
+.row {
+    display:flex;
+}
+
+.column {
+    flex: 33.33%;
+    align-self: stretch;
+    padding: 5px;
+    height: auto;
+    border-top: 1px solid #999;
+    border-right: 2px solid #555;
+    border-bottom: 2px solid #555;
+    border-left: 1px solid #999;
+}
+
+div.row img {
+    border-top: 2px solid #555;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
+    border-left: 2px solid #555;
+}
+
+div.row figcaption {
+    font-size: 1.75vw;
+}
+
+@media screen and (max-width: 500px) {
+    .column {
+        width: 100%;
+    }
+}
+
+/* Caption styles: */
+
+figcaption {
+    color: #06d817;
+    font-style: italic;
+    padding: 2px;
+    text-align: center;
+}
+
+/* Banner styles: */
+
+#banner_link {
+    text-decoration: none;
+    color: white;
+}
+
+#banner_link :hover {
+    color: #06d817;
+}
+
+#banner_link :visited {
+    color: white
+}
+
+.banner {
+    width: 100%;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-size: 1.5vw;
+    overflow: hidden;
+}
+
+.banner :hover {
+    color: #06d817;
+}
+
+/* Footer: */
+
+.onet_footer {
+    width:100%;
+    border-top: 1px solid #06d817;
+    padding:0.5em 0.5em 0;
+    font-size: 10px;
+}
+
+/* Sidebar styles: */
+
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #06d817
+}
+
+/* Change style of sidebar on small screens: */
+
+@media screen and (max-heigh: 450px) {
+    .sidenav {padding-top: 15px}
+    .sidenav a {font-size: 18px}
+}
+
+
+/* Style for inner content: */
+
+.inner {
+    margin-left: 160px;
+    padding: 0px 10px;
+    color: white;
+}
+
+/* Body: */
+
+body {
+    background: #1E1E1E;
+}
+
+/* Everything Else: */
+
+h1 {
+    color: #06d817;
+}
+
+h2 {
+    color: #06d817;
+}
