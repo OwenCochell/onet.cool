@@ -30,3 +30,5 @@ Currently, ONet has the following pages:
 
 onet.cool is a fun personal site for making my presence more known on the internet.
 Certain components can and will change!
+
+If you have any questions, comments, or feedback, please feel free to email me!
