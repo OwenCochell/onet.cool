@@ -25,6 +25,8 @@ Currently, ONet has the following pages:
 * [projects](https://www.onet.cool/projects.html) - Some of my personal projects
 * [cool pages](https://www.onet.cool/cool_pages.html) - Super cool pages
 * [contact](https://www.onet.cool/contact.html) - Info on where to find/contact me
+* [qotd](https://www.onet.cool/qotd.html) - HTML page containing the QOTD 
+* [copyright](https://www.onet.cool/copyright.html) - Copyright info
 
 # Conclusion
 
