@@ -16,3 +16,12 @@
 .cool_banner :hover {
     color: #06d817;
 }
+
+/* Centered Image: */
+
+.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
