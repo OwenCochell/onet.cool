@@ -126,6 +126,8 @@ div.row img {
     border-right: 1px solid #999;
     border-bottom: 1px solid #999;
     border-left: 2px solid #555;
+    height: 80%;
+    width: 100%;
 }
 
 div.row figcaption {

@@ -1,5 +1,13 @@
 /* Cool Page CSS */
 
+/* Centered Image: */
+
+.centered img {
+    display: block;
+    margin: auto;
+    width: 60%;
+}
+
 /* Banner: */
 
 .cool_banner {
@@ -17,11 +25,10 @@
     color: #06d817;
 }
 
-/* Centered Image: */
+.red {
+    color: red;
+}
 
-.centered {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+.purple {
+    color:purple;
 }
