@@ -1,0 +1,23 @@
+/* TEAM */
+
+    Chief Developer: Owen Cochell
+    Contact: owencochell@hotmail.com
+    Location: Possibly in Michigan
+
+/* Site */
+
+    Language: English
+    Doctype: HTML5
+    IDE: VSCode
+
++===========================+
+|     ____  _   __     __   |
+|    / __ \/ | / /__  / /_  |
+|   / / / /  |/ / _ \/ __/  |
+|  / /_/ / /|  /  __/ /_    |
+|  \____/_/ |_/\___/\__/    |
+|                     .cool |
++===========================+
+             By: Owen Cochell
+
+--== [ Best Wishes! ] ==--

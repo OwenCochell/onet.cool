@@ -6,66 +6,60 @@ Some really neat pages
 
 <html lang="en">
     <head>
-        <!-- Lets define some metadata here: -->
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="ONet cool pages." />
-        
-        <!-- Set our title: -->
-        
+        <!--#include virtual="meta/head.html"-->        
+        <meta name="description" content="ONet cool pages" />
         <title>Cool Pages</title>
-        
-        <link rel="stylesheet" href="style.css"/>
-        <link rel="stylesheet" href="normalize.css"/>
-
-        <link rel="shortcut icon" type="image/jpg" href="favicon-32x32.png">
     </head>
 
     <body>
-        <!--#include virtual="sidebar.html" -->
+        <!--#include virtual="meta/sidebar.html" -->
 
         <div class="inner">
-            <!--#include virtual="banner.html" -->
 
-            <h1>Cool Pages</h1>
+            <div class="content">
+                <!--#include virtual="meta/banner.html" -->
 
-            <p>
-                Here are some super cool pages,
-                provided to me by some super cool people.
-                I highly encourage having a look at each and every one.
-                Can you see your page here? Think you have what it takes to be a cool person?
-                Very bold words. <a href="contact.html">Get in touch</a> with me and 
-                we will talk about it.
-            </p>
+                <h1>Cool Pages</h1>
 
-            <h1><a href="cool_pages/demo.html">Demo Page</a></h1>
+                <p>
+                    Here are some super cool pages,
+                    provided to me by some super cool people.
+                    I highly encourage having a look at each and every one.
+                    Can you see your page here? Think you have what it takes to be a cool person?
+                    Very bold words. <a href="contact.html">Get in touch</a> with me and 
+                    we will talk about it.
+                </p>
 
-            <div class="left">
-                <img src="images/dummy.JPG" alt="Demo Page Image"/>
-                <figcaption>Some super cool caption!</figcaption>
+                <h1><a href="cool_pages/demo.html">Demo Page</a></h1>
+
+                <div class="left">
+                    <img src="images/dummy.JPG" alt="Demo Page Image"/>
+                    <figcaption>Some super cool caption!</figcaption>
+                </div>
+
+                <p>By: Neat Guy</p>
+
+                <p>
+                    Here is a brief description of the slick page!
+                    I'm sure whatever is on this page subverts our expectations,
+                    and re-defines the meaning of life itself.
+                    Get ready, this page may shatter your fragile hold on life,
+                    and propel you into a new dimension of being. 
+                </p>
+                <p>
+                    This section will usually contain the description of your choosing,
+                    which will usually consist of who you are, description stuff, info,
+                    blah blah blah blah blah,
+                    random messages,
+                    cool things, uncool things, semi-cool things, moderately cool things.
+                </p>
+                <p>(I'm trying to add more text here so this description does not look awkward...)</p>
+                <p>You get the picture. Anything you want here will be placed here.</p>
+                <br clear="left">
+                <br>
+
             </div>
-
-            <p>By: Neat Guy</p>
-
-            <p>
-                Here is a brief description of the slick page!
-                I'm sure whatever is on this page subverts our expectations,
-                and re-defines the meaning of life itself.
-                Get ready, this page may shatter your fragile hold on life,
-                and propel you into a new dimension of being. 
-            </p>
-            <p>
-                This section will usually contain the description of your choosing,
-                which will usually consist of who you are, description stuff, info,
-                blah blah blah blah blah,
-                random messages,
-                cool things, uncool things, semi-cool things, moderately cool things.
-            </p>
-            <p>(I'm trying to add more text here so this description does not look awkward...)</p>
-            <p>You get the picture. Anything you want here will be placed here.</p>
-            <br clear="left">
-            <br>
-            <!--#include virtual="footer.html" -->
+            <!--#include virtual="meta/footer.html" -->
         </div>
     </body>
 </html>

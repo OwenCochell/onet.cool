@@ -12,53 +12,63 @@ Be warned, jankiness lies ahead!
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Lets define some metadata here: -->
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--#include virtual="meta/head.html"-->
         <meta name="description" content="ONet main page, the official site of Owen Cochell!" />
 
         <!-- Set our title: -->
 
         <title>ONet</title>
-
-        <link rel="stylesheet" href="style.css"/>
-        <link rel="stylesheet" href="normalize.css"/>
-
-        <link rel="shortcut icon" type="image/jpg" href="favicon-32x32.png">
     </head>
 
     <body>
 
-        <!--#include virtual="sidebar.html" -->
+        <!--#include virtual="meta/sidebar.html" -->
         <div class="inner">
 
-            <!--#include virtual="banner.html" -->
+            <div class="content">
 
-            <h1>Welcome to ONet!</h1>
+                <!--#include virtual="meta/banner.html" -->
 
-            <p>My name is Owen Cochell.
-                I'm just a fellow human who enjoys working and using computers
-                (Maybe a little too much).
-                I like to fancy myself as a semi-competent software developer,
-                but you can be the judge of that.
-                I work on a lot of random stuff, some hardware related,
-                others math related, and even more so software related.
-                If you can't tell already, i'm kind of a <s>no-life</s> super cool guy!
-            </p>
-            <p>ONet contains info about myself, my projects, and other random things
-                that find their way onto this godforsaken site.
-                This site will(hopefully) be updated semi-regularly,
-                so keep an eye out for new content.
-                Hopefully you find something of worth here!
-            </p>
-            <p>This website is my attempt at learning basic web development
-                (and a touch of  system administration),
-                so please excuse any poorly designed components.
-            </p>
+                <h1>Welcome to ONet!</h1>
 
-            <br>
+                <p>My name is Owen Cochell.
+                    I'm just a fellow human who enjoys working and using computers
+                    (Maybe a little too much).
+                    I like to fancy myself as a semi-competent software developer,
+                    but you can be the judge of that.
+                    I work on a lot of random stuff, some hardware related,
+                    others math related, and even more so software related.
+                    If you can't tell already, i'm kind of a <s>no-life</s> super cool guy!
+                </p>
+                <p>ONet contains info about myself, my projects, and other random things
+                    that find their way onto this godforsaken site.
+                    This site will(hopefully) be updated semi-regularly,
+                    so keep an eye out for new content.
+                    Hopefully you find something of worth here!
+                </p>
+                <p>This website is my attempt at learning basic web development
+                    (and a touch of  system administration),
+                    so please excuse any poorly designed components.
+                </p>
+                <p>
+                    ONet is proudly tracker free! This means we do NOT track any info about you,
+                    unless you are doing something you shouldn't be ;) .
+                    Unlike some <i>other</i> companies and entities,
+                    I respect your privacy,
+                    and believe that every internet user is entitled to a safe,
+                    tracker free web experience.
+                    Plus, I am not a creep that exploits my uneducated users
+                    into creating revenue based off data collection and analytics,
+                    because that's just creepy and weird.
+                    Cookies, ads, and browser fingerprinting of any kind is NOT present on this site.
+                    Any advanced components, such as javascript,
+                    are purely for functional purposes only.  
+                </p>
 
-            <!--#include virtual="footer.html" -->                        
+                <br>
+            </div>
+
+            <!--#include virtual="meta/footer.html" -->                        
         </div>
     </body>
 </html>
