@@ -1,11 +1,31 @@
 /* Highlight color: */
-
-::-moz-selection {
-    background: #06d817;
+/*** Works on common browsers ***/
+::selection {
+    background-color: #06d817;
+    color: #fff;
 }
 
-::selection {
-    background: #06d817;
+/*** Mozilla based browsers ***/
+::-moz-selection {
+    background-color: #06d817;
+    color: #fff;
+}
+
+/***For Other Browsers ***/
+::-o-selection {
+    background-color: #06d817;
+    color: #fff;
+}
+
+::-ms-selection {
+    background-color: #06d817;
+    color: #fff;
+}
+
+/*** For Webkit ***/
+::-webkit-selection {
+    background-color: #06d817;
+    color: #fff;
 }
 
 /* Centered Image: */
@@ -166,7 +186,7 @@ figcaption {
 
 .banner {
     width: 100%;
-    border: 1px solid black;
+    border: 1px solid 736b5e;
     background-color: black;
     color: white;
     text-align: center;
@@ -206,7 +226,7 @@ figcaption {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #989082;
     display: block;
 }
 
@@ -237,7 +257,7 @@ figcaption {
 /* Body: */
 
 body {
-    background: #1E1E1E;
+    background: #131516;
 }
 
 /* Everything Else: */
