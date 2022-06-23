@@ -1,0 +1,253 @@
+<!---
+Webpage for WRA 101 Project 3.
+Ideally, we will be going over some technical literacies,
+and how I utilized them in this website.
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <!--#include virtual="meta/head.html"-->
+
+        <meta name="description" name="WRA 101 Project 3 Page"/>
+        <title>WRA 101</title>
+
+    </head>
+
+    <body>
+        <!--#include virtual="meta/sidebar.html"-->
+
+        <div class="inner">
+
+            <div class="content">
+
+                <!--#include virtual="meta/banner.html" -->
+
+                <h1>WRA 101 Project 3</h1>
+
+                <p>
+                    Welcome to my website! This page will showcase my technical literacies.
+                    To me, my technical literacies are the most important skill that I have,
+                    as it allows me to manipulate and navigate the technical world.
+                    This website is just one of the ways that I can make my stand in the technical world.
+                    For this final project, I will be going into detail about this website, how it was created,
+                    hosted, and secured from scratch.
+                </p>
+
+                <h1>Nginx</h1>
+
+                <div class="left">
+                    <img src="images/nginx.png", alt="Nginx"/>
+                </div>
+
+                <div>
+
+                    <p>
+                        Every website needs to be 'hosted' somewhere. This means that a machine
+                        running a webserver is needed to host the website.
+                        The webserver I am using is <a href="https://nginx.org/en/">Nginx</a>,
+                        which is a very fast and customizable webserver.
+
+                        Nginx also allows me to host internal web services for my home network,
+                        and provides access control to ensure that only trusted people can access the services.
+                        For example, if you attempt to navigate to <a href="vpn.onet.cool">vpn.onet.cool</a>,
+                        you will got a 403 Forbidden error. This is because the VPN site is not accessible from the internet.
+
+                        My webserver is hosted locally on a bare metal machine that I own.
+                        Some people rent out machines (or virtual hosts) to host websites,
+                        but when I first created my home network, I did not have the money to rent our own machine.
+                        Because of this, I opted to setup and host the webserver on my own machine.
+                    </p>
+                </div>
+                <br clear="left">
+
+                <h1>HTTPs</h1>
+
+                <p>
+                    Along with Nginx, I had to configure a technology called HTTPs,
+                    which is a secure version of HTTP, as it transfers data over a secure encrypted connection.
+                    To do this, I had to obtain and install an HTTPs certificate by a trusted source.
+                    This allows clients that connect to my website to confirm that they are connecting to me,
+                    and not someone else. I used a service called <a href="https://letsencrypt.org">Let's Encrypt</a>, which provides these certificates 
+                    for free if you can prove you own the domain name you are trying to register.
+                    This allows my website to be completely secure! If you lock in the address bar, 
+                    you should see a lock icon, which means this site is secured by HTTPs. 
+                    If you click on the lock, then you can see some extra info about my certificates.
+
+                    A project by the name of SSL Labs allows websites to test their HTTPs configuration to ensure that it is secure.
+                    You can check out my results <a href="https://www.ssllabs.com/ssltest/analyze.html?d=onet.cool">here</a>.
+
+                </p>
+
+                <h1>Domain Name</h1>
+
+                <p>
+                    A domain name is a service that allows humans to identify a website.
+                    When computers connect to a website, they need an IP address.
+                    For humans, memorizing an IP address is a huge pain,
+                    so we use domain names instead.
+
+                    A domain name ties a name to an IP address.
+                    So instead of memorizing and typing out a IP address,
+                    you can type a domain name instead.
+
+                    If you want to learn more about my domain name, you can use a whois service.
+                    whois allows people to see the personal info of the person who owns the domain name.
+                    I bought my domain name from <a href="https://www.namecheap.com">NameCheap</a>, which provides whois privacy protection.
+                    This means that many fields are hidden from the public.
+                    You can check out my whois report <a href="https://www.whois.com/whois/onet.cool">here</a>.
+                </p>
+
+                <h1>Bot Protection</h1>
+
+                <p>
+                    The internet is a dangerous place, so it is expected to get a bunch of requests
+                    from bots attempting to scrape info and exploit vulnerabilities.
+                    I utilize multiple technologies to protect my website from these attacks,
+                    that I unfortunately can't get into due to security reasons.
+
+                    I can show a snippet of my daily log report that documents potential bot attacks:
+                </p>
+
+                <pre>
+                    --------------------- httpd Begin ------------------------ 
+
+                    0.20 MB transferred in 223 responses  (1xx 0, 2xx 26, 3xx 15, 4xx 180, 5xx 2) 
+                         8 Images (0.00 MB),
+                        15 Documents (0.01 MB),
+                         2 Windows executable files (0.00 MB),
+                       130 Content pages (0.18 MB),
+                         3 Redirects (0.00 MB),
+                         1 mod_proxy requests (0.00 MB),
+                        64 Other (0.01 MB) 
+                    
+                    Attempts to use known hacks by 2 hosts were logged 2 time(s) from:
+                       109.237.100.22: 1 Time(s)
+                          \\x81 1 Time(s) 
+                       109.237.103.38: 1 Time(s)
+                          \\x81 1 Time(s) 
+                    
+                    Connection attempts using mod_proxy:
+                       89.248.165.52 -> 85.206.160.115:80: 1 Time(s)
+                    
+                    A total of 2 sites probed the server 
+                       109.237.100.22
+                       109.237.103.38
+                    
+                    Requests with error response codes
+                       400 Bad Request
+                          null: 17 Time(s)
+                          /: 7 Time(s)
+                          *: 4 Time(s)
+                          /.git/HEAD: 1 Time(s)
+                          /7nHo: 1 Time(s)
+                          /CSS/Miniweb.css: 1 Time(s)
+                          /Portal/Portal.mwsl: 1 Time(s)
+                          /Portal0000.htm: 1 Time(s)
+                          /ab2g: 1 Time(s)
+                          /ab2h: 1 Time(s)
+                          /config/getuser?index=0: 1 Time(s)
+                          /indice.jsp: 1 Time(s)
+                          /nmaplowercheck1655672997: 1 Time(s)
+                          /sdk: 1 Time(s)
+                          /sra_{BA195980-CD49-458b-9E23-C84EE0ADCD75}/: 1 Time(s)
+                          85.206.160.115:80: 1 Time(s)
+                          \xA2of\x96\xDD-\xC2d\x9A[\x1DCP\xFD\x94\x1 ... (\xC0#\xC0'\xC0: 1 Time(s)
+                          icap://icap-server.net/server?arg=87: 1 Time(s)
+                          k\x82d\x9F\xEA\x95\xFD!s\xB6\xD2\xF7+\xB3\ ... D\xC0$\xC0(\xC0: 1 Time(s)
+                       403 Forbidden
+                          /js/audio.js: 1 Time(s)
+                          /normalize.css: 1 Time(s)
+                          /style.css: 1 Time(s)
+                       404 Not Found
+                          /: 39 Time(s)
+                          /.env: 5 Time(s)
+                          /favicon.ico: 3 Time(s)
+                          /sitemap.xml: 3 Time(s)
+                          /boaform/admin/formLogin: 2 Time(s)
+                          /robots.txt: 2 Time(s)
+                          /.aws/credentials: 1 Time(s)
+                          /.git/HEAD: 1 Time(s)
+                          /.well-known/security.txt: 1 Time(s)
+                          //2019/wp-includes/wlwmanifest.xml: 1 Time(s)
+                          //2020/wp-includes/wlwmanifest.xml: 1 Time(s)
+                          //2021/wp-includes/wlwmanifest.xml: 1 Time(s)
+                          //blog/wp-includes/wlwmanifest.xml: 1 Time(s)
+                          //cms/wp-includes/wlwmanifest.xml: 1 Time(s)
+                          //feed/: 1 Time(s)
+                          //shop/wp-includes/wlwmanifest.xml: 1 Time(s)
+                          //site/wp-includes/wlwmanifest.xml: 1 Time(s)
+                          //test/wp-includes/wlwmanifest.xml: 1 Time(s)
+                          //web/wp-includes/wlwmanifest.xml: 1 Time(s)
+                          //wordpress/wp-includes/wlwmanifest.xml: 1 Time(s)
+                          //wp-includes/ID3/license.txt: 1 Time(s)
+                          //wp/wp-includes/wlwmanifest.xml: 1 Time(s)
+                          //wp1/wp-includes/wlwmanifest.xml: 1 Time(s)
+                          //xmlrpc.php?rsd: 1 Time(s)
+                          /CSS/Miniweb.css: 1 Time(s)
+                          /HNAP1: 1 Time(s)
+                          /Portal/Portal.mwsl: 1 Time(s)
+                          /Portal0000.htm: 1 Time(s)
+                          /ReportServer: 1 Time(s)
+                          /YAWk: 1 Time(s)
+                          /config/getuser?index=0: 1 Time(s)
+                          /confluence: 1 Time(s)
+                          /dana-na/auth/url_2/welcome.cgi: 1 Time(s)
+                          /dana-na/auth/url_3/welcome.cgi: 1 Time(s)
+                          /dana-na/auth/url_default/welcome.cgi: 1 Time(s)
+                          /docs/cplugError.html/: 1 Time(s)
+                          /indice.jsp: 1 Time(s)
+                          /localstart.shtml: 1 Time(s)
+                          /main.cgi: 1 Time(s)
+                          /menu.cgi: 1 Time(s)
+                          /mgmt/tm/util/bash: 1 Time(s)
+                          /nmaplowercheck1655672997: 1 Time(s)
+                          /pages: 1 Time(s)
+                          /pools: 1 Time(s)
+                          /pools/default/buckets: 1 Time(s)
+                          /scripts/WPnBr.dll: 1 Time(s)
+                          /sdk: 1 Time(s)
+                          /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php: 1 Time(s)
+                          /wiki: 1 Time(s)
+                       405 Method Not Allowed
+                          /: 1 Time(s)
+                       444 Closed Without Response
+                          /: 20 Time(s)
+                          /.git/HEAD: 1 Time(s)
+                          /7nHo: 1 Time(s)
+                          /?=PHPE9568F36-D428-11d2-A769-00AA001ACF42: 1 Time(s)
+                          /CSS/Miniweb.css: 1 Time(s)
+                          /Portal/Portal.mwsl: 1 Time(s)
+                          /Portal0000.htm: 1 Time(s)
+                          /ecp/Current/exporttool/microsoft.exchange ... ool.application: 1 Time(s)
+                          /indice.jsp: 1 Time(s)
+                          /nice%20ports%2C/Tri%6Eity.txt%2ebak: 1 Time(s)
+                          /nmaplowercheck1655672997: 1 Time(s)
+                          /owa/auth/logon.aspx?url=https%3a%2f%2f1%2fecp%2f: 1 Time(s)
+                          /owa/auth/x.js: 1 Time(s)
+                          /scripts/WPnBr.dll: 1 Time(s)
+                          /sdk: 1 Time(s)
+                          /wp-login.php: 1 Time(s)
+                       505 HTTP Version Not Supported
+                          /boaform/admin/formLogin: 2 Time(s)
+                    
+                    A total of 1 ROBOTS were logged 
+                       - 7 Time(s) 
+                    
+                    ---------------------- httpd End ------------------------- 
+                </pre>
+
+                <p>
+                    There is a lot here! The sections to look at though are 400, 403, and 404 sections.
+                    Each error is usually a bot trying to talk to vulnerable services.
+                    Luckily, I don't serve these services, so the bot gets a 404 error.
+                    If one host gets too many 404 errors, it probably is a bot, and it is then banned. 
+                </p>
+
+            </div>
+        </div>
+    </body>
+
+</html>
