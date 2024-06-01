@@ -303,3 +303,21 @@ h2 {
         background-position: 100% 0;
     }
 }
+
+.motd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-wrap: wrap;
+    padding: 10px;
+}
+
+.banner-pre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-wrap: wrap;
+    padding: 10px;
+}
